@@ -1,0 +1,73 @@
+body {
+    background-image: url("images/dentist.jpg");
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+.input-form {
+    color: white;
+    font-weight: bold;
+    background-color: rgb(39, 159, 206);
+    padding: 1%;
+    margin: 5% 3%;
+}
+
+.row {
+    width: 99vw;
+    text-align: center;
+}
+
+#main-table-container {
+    position: relative;
+    overflow-y: scroll;
+    max-height: 70vh;
+}
+
+#main-table {
+    background-color: rgb(39, 159, 206);
+    color: white;
+}
+
+#hash-spec {
+    margin-top: 30px;
+    background-color: rgb(39, 159, 206);
+    color: white;
+}
+
+#table-range-value {
+    -webkit-appearance: none;
+    width: 80%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+#table-range-value::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: white;
+    cursor: pointer;
+}
+
+#table-range-value::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: white;
+    cursor: pointer;
+}
+
+#slider-container {
+    background-color: rgb(39, 159, 206);
+    font-weight: bold;
+    color: white;
+}
+
+.green {
+    color: orange;
+}

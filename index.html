@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <link href="assets/styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <body>
+        <br><br>
+        <div class="row">
+            <div class="col-4">
+                <div id="search-form" class="input-form">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Szukaj pacjenta</label>
+                        <input class="form-control" id="search-input" aria-describedby="emailHelp" placeholder="PESEL">        
+                    </div>
+                    <button class="btn btn-primary" onclick="searchPatient($('#search-input')[0].value)">Szukaj</button>
+                </div>
+                <div id="new-patient-form" class="input-form">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Dodaj pacjenta</label>
+                            <input class="form-control" id="new-patient-name" aria-describedby="emailHelp" placeholder="Imie"><br>        
+                            <input class="form-control" id="new-patient-surname" aria-describedby="emailHelp" placeholder="Nazwisko"><br>
+                            <input class="form-control" id="new-patient-pesel" aria-describedby="emailHelp" placeholder="PESEL">
+                        </div>
+                        <button class="btn btn-primary"
+                            onclick="addPatient(
+                                $('#new-patient-name')[0].value,
+                                $('#new-patient-surname')[0].value,
+                                $('#new-patient-pesel')[0].value
+                                )"
+                        >Dodaj</button>
+                </div>
+                <div id="delete-form" class="input-form">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Usuń pacjenta</label>
+                            <input class="form-control" id="delete-input" aria-describedby="emailHelp" placeholder="PESEL">        
+                        </div>
+                        <button class="btn btn-primary" onclick="deletePatient($('#delete-input')[0].value)">Usuń</button>
+                </div>
+                <div class="input-form">
+                    <p>Długość tablicy: <span id="table-range"></span></p>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="table-range-value">
+                </div>
+            </div>
+            <div class="col-8" style="display: inline-block">
+                <div id="main-table-container">
+                    <table id="main-table" class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Imię</th>
+                                <th scope="col">Nazwisko</th>
+                                <th scope="col">Pesel</th>
+                            </tr>
+                        </thead>
+                        <tbody id="main-table-body">
+
+                        </tbody>
+                    </table>
+                </div>
+                <div id="hash-spec">
+                    <p><b>Kod haszujący</b></p>
+                    <div id="hash-spec-calc">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>    
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="scripts/customer.js"></script>
+        <script src="scripts/generatingIndex.js"></script>
+        <script src="scripts/scripts.js"></script>
+    </head>
+    </body>
+</html>
